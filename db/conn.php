@@ -1,7 +1,7 @@
 
 <?php
 
-$conn = new mysqli('localhost', 'root', '', 'form');
+$conn = new mysqli('localhost', 'root', 'root', 'form');
 
 // Check connection
 if ($conn->connect_error) {

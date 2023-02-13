@@ -38,11 +38,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 ?>
-<?php if (!empty($msg)) {?>
+<?php if (!empty($msg)) { ?>
     <div class="alert alert-danger alert-dismissible show">
-        <strong><?=$msg;?></strong>
+        <strong><?= $msg; ?></strong>
     </div>
-<?php }?>
+<?php } ?>
 <div class="form_container p-5">
     <form method="post" action="add.php">
         <div class="form-group">
@@ -56,4 +56,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <button type="submit" class="btn btn-primary mb-2">Submit</button>
     </form>
 </div>
-<?php require_once "../footer.php"?>
+<?php require_once "../footer.php" ?>
