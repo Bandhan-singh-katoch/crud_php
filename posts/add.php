@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (!$err) {
 
-        $sql = "INSERT INTO `user` (`name`, `description`, `created_at`, `updated_at`) VALUES ('$name', '$desc' , now(), now())";
+        $sql = "INSERT INTO `posts` (`name`, `description`, `created_at`, `updated_at`) VALUES ('$name', '$desc' , now(), now())";
 
         if ($conn->query($sql) === true) {
             $msg = "Added successfully  ";

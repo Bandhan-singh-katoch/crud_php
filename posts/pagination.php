@@ -1,5 +1,5 @@
 <?php
-$sql1 = "SELECT * FROM user WHERE CONCAT_WS('',name,description) LIKE '%$keyword%' ORDER BY {$sort_by} {$sort_order}";
+$sql1 = "SELECT * FROM posts WHERE CONCAT_WS('',name,description) LIKE '%$keyword%' ORDER BY {$sort_by} {$sort_order}";
 $result1 = $conn->query($sql1);
 $total_rows = $result1->num_rows;
 if ($total_rows > 0) {

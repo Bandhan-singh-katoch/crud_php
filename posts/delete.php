@@ -6,7 +6,7 @@ $id = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $id = $_POST['id'];
-    $sql_delete = "DELETE FROM user WHERE id=$id";
+    $sql_delete = "DELETE FROM posts WHERE id=$id";
 
     if ($conn->query($sql_delete)) {
         header("Location: list.php");

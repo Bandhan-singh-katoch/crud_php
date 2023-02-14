@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     if ($nonce == 1) {
         // request made from the same file
-        $sql = "UPDATE `user` SET `name` = '$name', `description` = '$desc', `updated_at` = now() WHERE `user`.`id` = '$id' ";
+        $sql = "UPDATE `posts` SET `name` = '$name', `description` = '$desc', `updated_at` = now() WHERE `posts`.`id` = '$id' ";
         $conn->query($sql);
         $conn->close();
         header("Location: list.php");

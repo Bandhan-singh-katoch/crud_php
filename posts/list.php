@@ -34,7 +34,7 @@ if (isset($_GET['keyword'])) {
 
 // sql for receiving the data from table
 //we have another query in pagination also so edit the sql accordingly
-$sql = "SELECT * FROM user WHERE CONCAT_WS('',name,description) LIKE '%$keyword%' ORDER BY {$sort_by} {$sort_order} LIMIT {$offset},{$limit}";
+$sql = "SELECT * FROM posts WHERE CONCAT_WS('',name,description) LIKE '%$keyword%' ORDER BY {$sort_by} {$sort_order} LIMIT {$offset},{$limit}";
 $result = $conn->query($sql);
 ?>
 

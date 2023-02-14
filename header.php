@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION["email"])) {
+    header("location: /index.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,11 +31,15 @@
                     <a class="nav-link disabled" href="#">Home</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="../posts/add.php">ADD<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/posts/add.php">ADD<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../posts/list.php">List</a>
+                    <a class="nav-link" href="/posts/list.php">List</a>
                 </li>
+                <li class="nav-item float-right">
+                    <a class="nav-link" href="/register/logout.php">Logout</a>
+                </li>
+
             </ul>
         </div>
     </nav>
